@@ -4,6 +4,8 @@ import Image from 'react-bootstrap/Image';
 import { setAuthedUser } from '../actions/authedUser';
 import { Redirect } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class User extends React.Component {
     state = {
@@ -32,12 +34,15 @@ class User extends React.Component {
                     border="secondary"
                     onClick={this.handleOnUserClick}
                     style={{ width: '18rem' }}>
-                    <div>
-                        <Image src={user.avatarURL} roundedCircle className='user-avatar' />
-                    </div>
-                    <div className="user-name-login">
-                        <p>{user.name}</p>
-                    </div>
+                    <Row>
+                        <Col>
+                            <div><Image src={user.avatarURL} roundedCircle className='user-avatar' /></div>
+                            <div className="user-name-login">
+                                <p>{user.name}</p>
+                            </div>
+                        </Col>
+                    </Row>
+
                 </Container>
             </div>
         )

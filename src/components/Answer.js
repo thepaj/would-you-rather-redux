@@ -16,43 +16,43 @@ class Answer extends React.Component {
                 <Jumbotron className="question-container">
                     <div className='author-info'>
                         <Row>
-                            <Col>
+                            <Col className="author-avatar-container">
                                 <Image src={user.avatarURL} roundedCircle className="small-avatar" />
                             </Col>
-                            <Col className="user-name">
+                            <Col className="author-name-container">
                                 <p>{user.name} asks:</p>
                             </Col>
                         </Row>
                     </div>
                     <div>
-                        <h3>Would you rather</h3>
-                        {question.optionOne.votes.includes(authedUser) &&
-                            <div>
-                                <p className="voted-answer">{question.optionOne.text}</p>
-                            </div>
-                        }
-                        {!question.optionOne.votes.includes(authedUser) &&
-                            <div>
-                                <p>{question.optionOne.text}</p>
-                            </div>
-                        }
-                        <hr />
-                        {question.optionTwo.votes.includes(authedUser) &&
-                            <div>
-                                <p className="voted-answer">{question.optionTwo.text}</p>
-                            </div>
-                        }
-                        {!question.optionTwo.votes.includes(authedUser) &&
-                            <div>
-                                <p>{question.optionTwo.text}</p>
-                            </div>
-                        }
-                        <Button
-                            as={Link}
-                            to={`questions/${question.id}`}
-                            variant="dark" >
-                            Click for details
-                        </Button>
+                        <div className="wyr-container">
+                            <h3 className="would-you-rather-text">Would you rather</h3>
+                            {question.optionOne.votes.includes(authedUser) &&
+                                <div className="answer-container">
+                                    <p className="voted-answer">{question.optionOne.text}</p>
+                                </div>
+                            }
+                            {!question.optionOne.votes.includes(authedUser) &&
+                                <div className="answer-container">
+                                    <p className="option-text">{question.optionOne.text}</p>
+                                </div>
+                            }
+                            {question.optionTwo.votes.includes(authedUser) &&
+                                <div className="answer-container">
+                                    <p className="voted-answer">{question.optionTwo.text}</p>
+                                </div>
+                            }
+                            {!question.optionTwo.votes.includes(authedUser) &&
+                                <div className="answer-container">
+                                    <p className="option-text">{question.optionTwo.text}</p>
+                                </div>
+                            }
+                        </div>
+                        <Link to={`questions/${question.id}`}>
+                            <button className="main-btn">
+                                Click for details
+                            </button>
+                        </Link>
                     </div>
                 </Jumbotron>
             </div>

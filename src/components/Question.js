@@ -50,33 +50,34 @@ class Question extends React.Component {
                 <Jumbotron className="question-container">
                     <div className='author-info'>
                         <Row>
-                            <Col>
+                            <Col className="author-avatar-container">
                                 <Image src={user.avatarURL} roundedCircle className="small-avatar" />
                             </Col>
-                            <Col className="user-name">
+                            <Col className="author-name-container">
                                 <p>{user.name} asks:</p>
                             </Col>
                         </Row>
                     </div>
-                    <div>
-                        <h3>Would you rather</h3>
-                        <Button
-                            as={Link}
-                            to={`questions/${question.id}`}
-                            variant="dark"
-                            className="btn-vote"
-                            onClick={this.voteForOptionOne}>
-                            {question.optionOne.text}
-                        </Button>
-                        <hr />
-                        <Button
-                            as={Link}
-                            to={`questions/${question.id}`}
-                            variant="dark"
-                            className="btn"
-                            onClick={this.voteForOptionTwo}>
-                            {question.optionTwo.text}
-                        </Button>
+                    <div className="wyr-container">
+                        <h3 className="would-you-rather-text">Would you rather</h3>
+                        <Link to={`questions/${question.id}`}>
+                            <div
+                                className="option-container"
+                                onClick={this.voteForOptionOne}>
+                                <p className="option-text">
+                                    {question.optionOne.text}
+                                </p>
+                            </div>
+                        </Link>
+                        <Link to={`questions/${question.id}`}>
+                            <div
+                                className="option-container"
+                                onClick={this.voteForOptionTwo}>
+                                <p className="option-text">
+                                    {question.optionTwo.text}
+                                </p>
+                            </div>
+                        </Link>
                     </div>
                 </Jumbotron>
             </div>

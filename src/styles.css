@@ -2,19 +2,113 @@ html,
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+
 }
 
-.main-title {
-  text-align: center;
-  margin-bottom: 20px;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
+/* dashboard */
 .question-container {
-  background-color: white;
+  background-color: #CDCDCD;
+  border-radius: 2%;
 }
 
-.list-item {
-  list-style-type: none
+.author-info {
+  display: flex;
+text-align: start;
+margin-bottom: 20px;
+}
+
+.author-avatar-container {
+  width: 50px;
+}
+
+.author-name-container {
+  width: 400px;
+  margin-left: -160px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.wyr-container {
+  justify-self: flex-end;
+}
+
+.answer-container {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 1%;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.option-container {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 1%;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.option-container:hover {
+  background-color: #FF6EC7;
+}
+
+.add-question-container {
+  background-color: #CDCDCD;
+}
+
+.item-container {
+  background-color: #CDCDCD;
+}
+
+.leaderboard-score-col {
+  width: 300px;
+}
+
+.leaderboard-user-name {
+  color: #FF6EC7;
+  font-weight: bold;
+}
+
+.leaderboard-question-text {
+  font-size: 13px;
+}
+
+.leaderboard-score-text {
+font-size: 20px;
+}
+
+.button-container {
+  float: right;
+  margin-right: 1px;
+}
+
+.cancel-btn {
+  margin-right: 10px;
+  background-color: grey;
+  color: white;
+  border: none;
+}
+
+.submit-btn {
+  background-color: #FF6EC7;
+  color: white;
+  border: none;
+}
+
+.main-btn {
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: none;
 }
 
 .leaderboard-container {
@@ -25,6 +119,58 @@ body {
   margin-right: 20px;
 }
 
+.user-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 15px;
+} 
+
+/* navigation  */
+
+/* text */
+.main-title {
+  font-family: 'Permanent Marker', cursive;
+  color: #FF6EC7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.second-heading {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.would-you-rather-text {
+font-weight: bold;
+font-size: 25px;
+}
+
+.voted-answer {
+  color: #FF6EC7;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.option-text {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.percentage-text {
+  font-size: 12px;
+  margin-top: -28px;
+}
+
+.user-name-login {
+  margin-top: 20px;
+}
+
+/* avatars */
 .user-avatar {
   max-width: 180px;
 }
@@ -33,28 +179,7 @@ body {
   max-width: 40px;
 }
 
-.author-info {
-  margin-bottom: 20px;
+/* lists */
+.list-item {
+  list-style-type: none
 }
-
-.user-name {
-  margin-left: -300px;
-  margin-top: 10px;
-}
-
-.user-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.user-name-login {
-  margin-top: 20px;
-}
-
-.voted-answer {
-  background-color: cyan;
-}
-
-.btn {
-  font-size: 15px;
-} 

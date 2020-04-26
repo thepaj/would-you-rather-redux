@@ -20,15 +20,13 @@ class App extends React.Component {
         return (
             <div>
                 <Navigation />
-                <Jumbotron>
-                    <Container fluid>
-                        <Route exact path='/' component={MainPage} />
-                        <Route path='/add' component={AddQuestion} />
-                        <Route path='/leaderboard' component={Leaderboard} />
-                        <Route path='/login' component={LogIn} />
-                        <Route path='/questions/:id' component={QuestionDetailPage} />
-                    </Container>
-                </Jumbotron>
+                <Container fluid className="container">
+                    <Route exact path='/' component={MainPage} />
+                    <Route path='/add' component={AddQuestion} />
+                    <Route path='/leaderboard' component={Leaderboard} />
+                    <Route path='/login' component={LogIn} />
+                    <Route path='/questions/:id' component={QuestionDetailPage} />
+                </Container>
             </div>
         )
     }

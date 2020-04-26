@@ -14,7 +14,7 @@ class QuestionList extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <h2>Questions</h2>
+                            <h2 className="second-heading">Questions</h2>
                             {this.props.unansweredQuestionsIds.map((id) => (
                                 <li key={id} className="list-item">
                                     <Question
@@ -24,7 +24,7 @@ class QuestionList extends React.Component {
                             ))}
                         </Col>
                         <Col>
-                            <h2>Answers</h2>
+                            <h2 className="second-heading">Your Answers</h2>
                             {this.props.answeredQuestionsIds.map((id) => (
                                 <li key={id} className="list-item">
                                     <Answer id={id} />

@@ -10,14 +10,13 @@ class LeaderboardUser extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col>
-                        <p>{user.name}</p>
-                        <hr />
-                        <p>Questions asked: {numberOfQuestions}</p>
-                        <p>Questions answered: {numberOfAnswers}</p>
+                    <Col className="leaderboard-user-col">
+                        <p className="leaderboard-user-name">{user.name}</p>
                     </Col>
-                    <Col>
-                        <p>Total score: {totalScore}</p>
+                    <Col className="leaderboard-score-col">
+                        <p className="leaderboard-question-text">Questions asked: {numberOfQuestions}</p>
+                        <p className="leaderboard-question-text">Questions answered: {numberOfAnswers}</p>
+                        <p className="leaderboard-score-text">Total score: {totalScore}</p>
                     </Col>
                 </Row>
             </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+
 import { handleAddQuestion } from '../actions/shared';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -59,40 +62,46 @@ class AddQuestion extends React.Component {
 
         return (
             <div>
-                <h1>Add question</h1>
-                <h2>Would you rather...</h2>
-                <Form>
-                    <Row>
-                        <Col>
-                            <Form.Control
-                                as="textarea"
-                                placeholder="First Option"
-                                value={textOne}
-                                onChange={this.handleOptionOneChange}
-                            />
-                        </Col>
-                        <Col>
-                            <Form.Control
-                                as="textarea"
-                                placeholder="Second option"
-                                value={textTwo}
-                                onChange={this.handleOptionTwoChange}
-                            />
-                        </Col>
-                    </Row>
-                    <br />
-                    <Row>
-                        <button
-                            onClick={this.onCancelClick}>
-                            Cancel
-                        </button>
-                        <button
-                            onClick={this.handleSubmit}
-                            disabled={textOne === '' || textTwo === ''}>
-                            Submit
-                        </button>
-                    </Row>
-                </Form>
+                <h1 className="main-title">Add question</h1>
+                <Jumbotron className="add-question-container">
+                    <h2 className="would-you-rather-text">Would you rather...</h2>
+
+                    <Form>
+                        <Row>
+                            <Col>
+                                <Form.Control
+                                    as="textarea"
+                                    placeholder="First Option"
+                                    value={textOne}
+                                    onChange={this.handleOptionOneChange}
+                                />
+                            </Col>
+                            <Col>
+                                <Form.Control
+                                    as="textarea"
+                                    placeholder="Second option"
+                                    value={textTwo}
+                                    onChange={this.handleOptionTwoChange}
+                                />
+                            </Col>
+                        </Row>
+                        <br />
+                        <Row className="button-container">
+                            <button
+                                className="cancel-btn"
+                                onClick={this.onCancelClick}>
+                                Cancel
+                                </button>
+                            <button
+                                className="submit-btn"
+                                onClick={this.handleSubmit}
+                                disabled={textOne === '' || textTwo === ''}>
+                                Submit
+                                </button>
+                        </Row>
+                    </Form>
+
+                </Jumbotron>
             </div>
         )
     }

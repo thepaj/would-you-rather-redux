@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LeaderboardUser from './LeaderboardUser';
-import Container from 'react-bootstrap/Container';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 class Leaderboard extends React.Component {
     render() {
         return (
             <div>
-                <Container fluid>
+                <h1 className="main-title">Leaderboard</h1>
+                <Jumbotron className="item-container">
                     <ol>
                         {this.props.usersIds.map((id) => (
                             <li key={id}>
@@ -16,7 +17,7 @@ class Leaderboard extends React.Component {
                             </li>
                         ))}
                     </ol>
-                </Container>
+                </Jumbotron>
             </div>
         )
     }

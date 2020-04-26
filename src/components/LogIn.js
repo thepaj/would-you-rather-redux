@@ -8,7 +8,7 @@ class LogIn extends React.Component {
     render() {
         return (
             <div>
-                <h3>Who is playing?</h3>
+                <h3 className="second-heading">Who is playing?</h3>
                 <Row>
                     {this.props.usersIds.map((id) => (
                         <Col key={id} className="list-item">

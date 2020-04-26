@@ -31,7 +31,7 @@ class Navigation extends React.Component {
                         {authedUser
                             ?
                             <Navbar.Text className="sign-user">
-                                Signed in as: <a href="#login">{authedUser}</a>
+                                Signed in as:   <a href="#login">{authedUser}</a>
                             </Navbar.Text>
                             : null
                         }
