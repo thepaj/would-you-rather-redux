@@ -14,6 +14,14 @@ To start the project:
 
     npm start
     
+Here is the screenshot of the first page, where existing user can log in.
+
+![Alt text](screenshots/login.png )
+
+And this is the dashboard with both unanswered and answered questions.
+
+
+![Alt text](screenshots/dashboard.png )
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
