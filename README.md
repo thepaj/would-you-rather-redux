@@ -14,6 +14,8 @@ To start the project:
 
     npm start
     
+## Design
+    
 Here is the screenshot of the first page, where existing user can log in.
 
 ![Alt text](screenshots/login.png )
