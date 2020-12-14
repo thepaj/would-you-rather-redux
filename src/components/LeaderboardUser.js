@@ -1,24 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 class LeaderboardUser extends React.Component {
     render() {
         const { user, numberOfQuestions, numberOfAnswers, totalScore } = this.props;
 
         return (
-            <div>
-                <Row>
-                    <Col className="leaderboard-user-col">
-                        <p className="leaderboard-user-name">{user.name}</p>
-                    </Col>
-                    <Col className="leaderboard-score-col">
-                        <p className="leaderboard-question-text">Questions asked: {numberOfQuestions}</p>
-                        <p className="leaderboard-question-text">Questions answered: {numberOfAnswers}</p>
-                        <p className="leaderboard-score-text">Total score: {totalScore}</p>
-                    </Col>
-                </Row>
+            <div className='leaderboard-container'>
+                <div className='leaderboard-user-container'>
+                        <div className="leaderboard-column">
+                            <p className="leaderboard-user-name">{user.name}</p>
+                        </div>
+                        <div className="leaderboard-column">
+                            <p className="leaderboard-question-text">Questions asked: {numberOfQuestions}</p>
+                            <p className="leaderboard-question-text">Questions answered: {numberOfAnswers}</p>
+                            <hr className='line'/>
+                            <p className="leaderboard-score-text">Total score: {totalScore}</p>
+                        </div>
+                    </div>
             </div>
         )
     }

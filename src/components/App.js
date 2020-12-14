@@ -5,10 +5,8 @@ import AddQuestion from './AddQuestion';
 import Leaderboard from './Leaderboard';
 import LogIn from './LogIn';
 import Navigation from './Navigation';
-import Container from 'react-bootstrap/Container';
 import { handleInitialData } from '../actions/shared';
 import { connect } from 'react-redux';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import QuestionDetailPage from './QuestionDetailPage';
 
 class App extends React.Component {
@@ -20,13 +18,13 @@ class App extends React.Component {
         return (
             <div>
                 <Navigation />
-                <Container fluid className="container">
+                <div className="container">
                     <Route exact path='/' component={MainPage} />
                     <Route path='/add' component={AddQuestion} />
                     <Route path='/leaderboard' component={Leaderboard} />
                     <Route path='/login' component={LogIn} />
                     <Route path='/questions/:id' component={QuestionDetailPage} />
-                </Container>
+                </div>
             </div>
         )
     }

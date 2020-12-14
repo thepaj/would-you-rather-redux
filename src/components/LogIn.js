@@ -1,24 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import User from './User';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
 class LogIn extends React.Component {
     render() {
         return (
-            <div>
+            <div className='login-container'>
                 <h3 className="second-heading">Who is playing?</h3>
-                <Row>
+                <div className='login-user-container'>
                     {this.props.usersIds.map((id) => (
-                        <Col key={id} className="list-item">
+                        <div key={id} className="login-user">
                             <User
                                 id={id}
                             />
-                            <br />
-                        </Col>
+                        </div>
                     ))}
-                </Row>
+                </div>
             </div>
         )
     }

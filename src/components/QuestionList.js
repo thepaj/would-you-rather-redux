@@ -2,18 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Question from './Question';
 import Answer from './Answer';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 class QuestionList extends React.Component {
     render() {
         return (
             <div>
                 <h1 className="main-title">Would you rather...?</h1>
-                <Container>
-                    <Row>
-                        <Col>
+                    <div className='main-page-container'>
+                        <div className='column'>
                             <h2 className="second-heading">Questions</h2>
                             {this.props.unansweredQuestionsIds.map((id) => (
                                 <li key={id} className="list-item">
@@ -22,17 +18,16 @@ class QuestionList extends React.Component {
                                     />
                                 </li>
                             ))}
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className='column'>
                             <h2 className="second-heading">Your Answers</h2>
                             {this.props.answeredQuestionsIds.map((id) => (
                                 <li key={id} className="list-item">
                                     <Answer id={id} />
                                 </li>
                             ))}
-                        </Col>
-                    </Row>
-                </Container>
+                        </div>
+                    </div>
             </div>
         )
     }

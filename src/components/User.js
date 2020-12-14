@@ -1,11 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Image from 'react-bootstrap/Image';
 import { setAuthedUser } from '../actions/authedUser';
 import { Redirect } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 class User extends React.Component {
     state = {
@@ -28,23 +24,16 @@ class User extends React.Component {
         const { user } = this.props;
 
         return (
-            <div>
-                <Container
-                    className="user-container"
+                <div
+                    className="user"
                     border="secondary"
                     onClick={this.handleOnUserClick}
                     style={{ width: '18rem' }}>
-                    <Row>
-                        <Col>
-                            <div><Image src={user.avatarURL} roundedCircle className='user-avatar' /></div>
+                            <img src={user.avatarURL} className='user-avatar' />
                             <div className="user-name-login">
-                                <p>{user.name}</p>
+                                {user.name}
                             </div>
-                        </Col>
-                    </Row>
-
-                </Container>
-            </div>
+                </div>
         )
     }
 }

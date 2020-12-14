@@ -1,10 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Button from 'react-bootstrap/Button';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Image from 'react-bootstrap/Image';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import { Link, withRouter } from 'react-router-dom';
 
 class Answer extends React.Component {
@@ -12,38 +7,33 @@ class Answer extends React.Component {
         const { question, authedUser, user } = this.props;
 
         return (
-            <div>
-                <Jumbotron className="question-container">
-                    <div className='author-info'>
-                        <Row>
-                            <Col className="author-avatar-container">
-                                <Image src={user.avatarURL} roundedCircle className="small-avatar" />
-                            </Col>
-                            <Col className="author-name-container">
-                                <p>{user.name} asks:</p>
-                            </Col>
-                        </Row>
+                <div className="question-container">
+                    <div className='top-container'>
+                        <img src={user.avatarURL} className="small-avatar" />
+                        <div className="would-you-rather-text">Would you rather</div>
                     </div>
                     <div>
-                        <div className="wyr-container">
-                            <h3 className="would-you-rather-text">Would you rather</h3>
+                        <div className="bottom-container">
                             {question.optionOne.votes.includes(authedUser) &&
-                                <div className="answer-container">
+                                <div className="first-answer-container">
                                     <p className="voted-answer">{question.optionOne.text}</p>
                                 </div>
                             }
                             {!question.optionOne.votes.includes(authedUser) &&
-                                <div className="answer-container">
+                                <div className="first-answer-container">
                                     <p className="option-text">{question.optionOne.text}</p>
                                 </div>
                             }
+                            <div className='or-container'>
+                                OR
+                            </div>
                             {question.optionTwo.votes.includes(authedUser) &&
-                                <div className="answer-container">
+                                <div className="second-answer-container">
                                     <p className="voted-answer">{question.optionTwo.text}</p>
                                 </div>
                             }
                             {!question.optionTwo.votes.includes(authedUser) &&
-                                <div className="answer-container">
+                                <div className="second-answer-container">
                                     <p className="option-text">{question.optionTwo.text}</p>
                                 </div>
                             }
@@ -54,7 +44,6 @@ class Answer extends React.Component {
                             </button>
                         </Link>
                     </div>
-                </Jumbotron>
             </div>
         )
     }
