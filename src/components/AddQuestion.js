@@ -1,8 +1,5 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 
 import { handleAddQuestion } from '../actions/shared';
 import { connect } from 'react-redux';
