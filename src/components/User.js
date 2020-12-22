@@ -29,7 +29,7 @@ class User extends React.Component {
                     border="secondary"
                     onClick={this.handleOnUserClick}
                     style={{ width: '18rem' }}>
-                            <img src={user.avatarURL} className='user-avatar' />
+                            <img alt={'user'} src={user.avatarURL} className='user-avatar' />
                             <div className="user-name-login">
                                 {user.name}
                             </div>

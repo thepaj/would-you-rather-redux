@@ -9,7 +9,7 @@ class Answer extends React.Component {
         return (
                 <div className="question-container">
                     <div className='top-container'>
-                        <img src={user.avatarURL} className="small-avatar" />
+                        <img alt={'answer'} src={user.avatarURL} className="small-avatar" />
                         <div className="would-you-rather-text">Would you rather</div>
                     </div>
                     <div>
